@@ -96,6 +96,10 @@ public class TestOuvrage {
         System.out.println("Vous avez retiré un ouvrage" + livre2.getTitre());
 
         System.out.println("Totale de ouvrages" + serie.getOuvrageTaille());
+
+        Pays pays = new Pays("Lebanon", "LEB");
+        Auteur auteur = new Auteur("A", "B", pays);
+
     }
 
 
