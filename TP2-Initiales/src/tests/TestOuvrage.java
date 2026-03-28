@@ -87,6 +87,10 @@ public class TestOuvrage {
         System.out.println("Test de la méthode equals d'bibliotheque.Ouvrage:" + !livre4.equals(john));
         System.out.println("Test de la méthode equals d'bibliotheque.Ouvrage:" + !livre4.equals(null));
         System.out.println("Test de la méthode equals d'bibliotheque.Ouvrage:" + !livre4.equals("Test"));
+
+        Pays pays = new Pays("Lebanon", "LEB");
+        Auteur auteur = new Auteur("A", "B", pays);
+        
     }
 
 
