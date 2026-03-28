@@ -28,15 +28,15 @@ public class TestOuvrage {
 
         //Voici une partie des tests! Il faut en ajouter, pour les fonctionnalités non testées!
         System.out.println("-----Test des constructeurs d'ouvrage et des diverses validations-----------");
-        Ouvrage livreA = new OuvragePapier("Titre assez long", john, 6);
+        Ouvrage livreA = new OuvrageAudio("Titre assez long", john, Ouvrage.Format.AUDIO, 5, OuvrageAudio.FormatOuvrageAudio.ANALOGIQUE);
         System.out.println(livreA);
-        Ouvrage livreB = new OuvragePapier("Ti", john, 8);
+        Ouvrage livreB = new OuvrageAudio("Ti", john, Ouvrage.Format.VIDEO, 7, OuvrageAudio.FormatOuvrageAudio.NUMERIC);
         System.out.println(livreB);
-        Ouvrage livreC = new OuvrageVideo(null, john, 7, 9);
+        Ouvrage livreC = new OuvrageAudio(null, john, Ouvrage.Format.PAPIER, 4, OuvrageAudio.FormatOuvrageAudio.NUMERIC);
         System.out.println(livreC);
 
         //bibliotheque.Auteur null et valeur par défaut de l'bibliotheque.Auteur
-        Ouvrage livreA1 = new OuvragePapier("Titre assez long", null, 0);
+        Ouvrage livreA1 = new OuvrageAudio("Titre assez long", null, Ouvrage.Format.PAPIER, 9, OuvrageAudio.FormatOuvrageAudio.ANALOGIQUE);
         System.out.println(livreA1);
         //bibliotheque.Auteur fonctionnel
         Ouvrage livre1 = new OuvrageVideo("Tout va bien", albertine, 9, 9);
@@ -57,7 +57,7 @@ public class TestOuvrage {
 
         System.out.println("\n-----Tests des méthodes acheter et vendre-----------");
 
-        Ouvrage livre3 = new OuvrageVideo("Musique du hasard", new Auteur("Paul", "Auster", new Pays("Etats-Unis", "USA")), Ouvrage.Format.PAPIER, 5, 5);
+        Ouvrage livre3 = new OuvrageAudio("Musique du hasard", new Auteur("Paul", "Auster", new Pays("Etats-Unis", "USA")), Ouvrage.Format.PAPIER, LocalDate.now(), 5, 9, OuvrageAudio.FormatOuvrageAudio.ANALOGIQUE);
 
         System.out.println(livre3);
 
@@ -70,12 +70,12 @@ public class TestOuvrage {
         System.out.println("On peut vendre 10 livres? " + livre3.vendre(10));
         System.out.println(livre3);
 
-        Ouvrage livre4 = new OuvragePapier("Test", new Auteur("A", "B", new Pays("Etats-Unis", "USA")), Ouvrage.Format.PAPIER, LocalDate.now(), 5, 5);
+        Ouvrage livre4 = new OuvrageAudio("Test", new Auteur("A", "B", new Pays("Etats-Unis", "USA")), Ouvrage.Format.PAPIER, LocalDate.now(), 5, 7, OuvrageAudio.FormatOuvrageAudio.NUMERIC);
 
         System.out.println("\n-----Tests de la  méthode equals()-----------");
         //Deux ouvrages égaux
-        Ouvrage livre5 = new OuvrageVideo("Test", new Auteur("A", "B", new Pays("Etats-Unis", "USA")), Ouvrage.Format.PAPIER, 4, 5);
-        Ouvrage livre6 = new OuvragePapier("Test", new Auteur("A", "B", new Pays("Etats-Unis", "USA")), Ouvrage.Format.PAPIER, LocalDate.now(), 10, 6);
+        Ouvrage livre5 = new OuvrageAudio("Test", new Auteur("A", "B", new Pays("Etats-Unis", "USA")), Ouvrage.Format.PAPIER, null, 5, 3, OuvrageAudio.FormatOuvrageAudio.ANALOGIQUE);
+        Ouvrage livre6 = new OuvrageAudio("Test", new Auteur("A", "B", new Pays("Etats-Unis", "USA")), Ouvrage.Format.PAPIER, LocalDate.now(), 10, 9, OuvrageAudio.FormatOuvrageAudio.NUMERIC);
         //Un qui ne l'est pas
         Ouvrage livre7 = new OuvragePapier("Test", new Auteur("Z", "B", new Pays("Etats-Unis", "USA")), Ouvrage.Format.PAPIER, LocalDate.now(), 5, 9);
 
