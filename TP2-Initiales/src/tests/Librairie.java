@@ -2,6 +2,7 @@ package tests;
 
 import livres.Auteur;
 import livres.Ouvrage;
+import livres.OuvrageAudio;
 import livres.Pays;
 
 import java.util.ArrayList;
@@ -20,16 +21,16 @@ public class Librairie {
         auteurs.add(john);
         auteurs.add(jean);
 
-        ouvrages.add(new Ouvrage("Titre 1", john));
-        ouvrages.add(new Ouvrage("Titre 2", albertine));
-        ouvrages.add(new Ouvrage("Titre 3", john));
-        ouvrages.add(new Ouvrage("Titre 4", john));
-        ouvrages.add(new Ouvrage("Titre 5", albertine));
-        ouvrages.add(new Ouvrage("Titre 6", john));
-        ouvrages.add(new Ouvrage("Titre 7", john));
-        ouvrages.add(new Ouvrage("Titre 8", albertine,Ouvrage.Format.VIDEO));
-        ouvrages.add(new Ouvrage("Titre 9", john,Ouvrage.Format.AUDIO));
-        ouvrages.add(new Ouvrage("Titre 10", jean));
+        ouvrages.add(new OuvrageAudio("Titre 1", john, 6, OuvrageAudio.FormatOuvrageAudio.ANALOGIQUE));
+        ouvrages.add(new OuvrageAudio("Titre 2", albertine, 9, OuvrageAudio.FormatOuvrageAudio.NUMERIC));
+        ouvrages.add(new OuvrageAudio("Titre 3", john, 9, OuvrageAudio.FormatOuvrageAudio.NUMERIC));
+        ouvrages.add(new OuvrageAudio("Titre 4", john, 3, OuvrageAudio.FormatOuvrageAudio.ANALOGIQUE));
+        ouvrages.add(new OuvrageAudio("Titre 5", albertine, 6, OuvrageAudio.FormatOuvrageAudio.NUMERIC));
+        ouvrages.add(new OuvrageAudio("Titre 6", john, 7, OuvrageAudio.FormatOuvrageAudio.NUMERIC));
+        ouvrages.add(new OuvrageAudio("Titre 7", john, 9, OuvrageAudio.FormatOuvrageAudio.NUMERIC));
+        ouvrages.add(new OuvrageAudio("Titre 8", albertine,Ouvrage.Format.VIDEO, 7, OuvrageAudio.FormatOuvrageAudio.ANALOGIQUE));
+        ouvrages.add(new OuvrageAudio("Titre 9", john,Ouvrage.Format.AUDIO, 7, OuvrageAudio.FormatOuvrageAudio.NUMERIC));
+        ouvrages.add(new OuvrageAudio("Titre 10", jean, 9, OuvrageAudio.FormatOuvrageAudio.NUMERIC));
     }
 
     public List<Auteur> getAuteurs() {
