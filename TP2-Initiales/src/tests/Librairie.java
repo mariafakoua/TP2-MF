@@ -1,8 +1,6 @@
 package tests;
 
-import livres.Auteur;
-import livres.Ouvrage;
-import livres.Pays;
+import livres.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,16 +18,16 @@ public class Librairie {
         auteurs.add(john);
         auteurs.add(jean);
 
-        ouvrages.add(new Ouvrage("Titre 1", john));
-        ouvrages.add(new Ouvrage("Titre 2", albertine));
-        ouvrages.add(new Ouvrage("Titre 3", john));
-        ouvrages.add(new Ouvrage("Titre 4", john));
-        ouvrages.add(new Ouvrage("Titre 5", albertine));
-        ouvrages.add(new Ouvrage("Titre 6", john));
-        ouvrages.add(new Ouvrage("Titre 7", john));
-        ouvrages.add(new Ouvrage("Titre 8", albertine,Ouvrage.Format.VIDEO));
-        ouvrages.add(new Ouvrage("Titre 9", john,Ouvrage.Format.AUDIO));
-        ouvrages.add(new Ouvrage("Titre 10", jean));
+        ouvrages.add(new OuvragePapier("Titre 1", john, Ouvrage.Format.PAPIER,4));
+        ouvrages.add(new OuvrageVideo("Titre 2", albertine, Ouvrage.Format.VIDEO, 50, 900));
+        ouvrages.add(new OuvrageVideo("Titre 3", john, Ouvrage.Format.VIDEO, 20, 200));
+        ouvrages.add(new OuvragePapier("Titre 4", john, Ouvrage.Format.PAPIER,90));
+        ouvrages.add(new OuvragePapier("Titre 5", albertine, Ouvrage.Format.PAPIER, 700));
+        ouvrages.add(new OuvragePapier("Titre 6", john, Ouvrage.Format.PAPIER, 1000));
+        ouvrages.add(new OuvrageVideo("Titre 7", john, Ouvrage.Format.VIDEO, 60,300));
+        ouvrages.add(new OuvrageVideo("Titre 8", albertine,Ouvrage.Format.VIDEO, 7, 10));
+        ouvrages.add(new OuvrageVideo("Titre 9", john,Ouvrage.Format.AUDIO, 70, 300));
+        ouvrages.add(new OuvragePapier("Titre 10", jean, Ouvrage.Format.PAPIER, 8));
     }
 
     public List<Auteur> getAuteurs() {
