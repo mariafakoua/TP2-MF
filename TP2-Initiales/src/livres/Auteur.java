@@ -26,6 +26,7 @@ public class Auteur {
     public Auteur() {
         this(INCONNU, INCONNU, null);
     }
+    
 
     public String getPrenom() {
         return prenom;
