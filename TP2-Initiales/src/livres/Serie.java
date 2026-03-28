@@ -20,8 +20,16 @@ public class Serie {
         this.nom = nom;
     }
 
-    public ArrayList<Ouvrage> getOuvrages() {
-        return ouvrages;
+    public void ajouteOuvrage(Ouvrage ouvrage){
+        this.ouvrages.add(ouvrage);
+    }
+
+    public void enleveOuvrage(Ouvrage ouvrage){
+        this.ouvrages.remove(ouvrage);
+    }
+
+    public Integer getOuvrageTaille(){
+        return this.ouvrages.size();
     }
 
     public Serie(String nom) {

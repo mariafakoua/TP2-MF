@@ -6,6 +6,7 @@ import java.util.List;
 import livres.Ouvrage;
 import livres.Auteur;
 import livres.Pays;
+import livres.Serie;
 
 /**
  * CoursPOO 1
@@ -87,6 +88,17 @@ public class TestOuvrage {
         System.out.println("Test de la méthode equals d'bibliotheque.Ouvrage:" + !livre4.equals(john));
         System.out.println("Test de la méthode equals d'bibliotheque.Ouvrage:" + !livre4.equals(null));
         System.out.println("Test de la méthode equals d'bibliotheque.Ouvrage:" + !livre4.equals("Test"));
+
+        Serie serie = new Serie("Serie1");
+        serie.ajouteOuvrage(livre1);
+        System.out.println("Vous avez ajouté un ouvrage" + livre1.getTitre());
+        serie.ajouteOuvrage(livre2);
+        System.out.println("Vous avez ajouté un ouvrage" + livre2.getTitre());
+
+        serie.enleveOuvrage(livre2);
+        System.out.println("Vous avez retiré un ouvrage" + livre2.getTitre());
+
+        System.out.println("Totale de ouvrages" + serie.getOuvrageTaille());
     }
 
 
